@@ -54,6 +54,13 @@ public class BaseActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         break;
 
+                    case R.id.nav_send:
+                        Intent anIntent2 = new Intent(getApplicationContext(), OpenCVcamera.class);
+                        startActivity(anIntent2);
+//                        finish();
+                        drawerLayout.closeDrawers();
+                        break;
+
                 }
                 return false;
             }
@@ -83,6 +90,7 @@ public class BaseActivity extends AppCompatActivity {
     /**
      * Overrides the pending Activity transition by performing the "Enter" animation.
      */
+
     protected void overridePendingTransitionEnter() {
         overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
     }
