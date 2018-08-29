@@ -48,8 +48,15 @@ public class BaseActivity extends AppCompatActivity {
 
 
                     case R.id.nav_gallery:
-                        Intent anIntent = new Intent(getApplicationContext(), AboutUS.class);
+                        Intent anIntent = new Intent(getApplicationContext(), NewClassActivity.class);
                         startActivity(anIntent);
+//                        finish();
+                        drawerLayout.closeDrawers();
+                        break;
+
+                    case R.id.nav_slideshow:
+                        Intent anIntent3 = new Intent(getApplicationContext(), AboutUS.class);
+                        startActivity(anIntent3);
 //                        finish();
                         drawerLayout.closeDrawers();
                         break;

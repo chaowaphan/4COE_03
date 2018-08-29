@@ -17,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.FrameLayout;
 
 import org.opencv.android.OpenCVLoader;
 
@@ -44,10 +45,12 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        FrameLayout contentFrameLayout = (FrameLayout) findViewById(R.id.content_frame); //Remember this is the FrameLayout area within your activity_main.xml
+        getLayoutInflater().inflate(R.layout.activity_main, contentFrameLayout);
 
         // ------------------------------------------------------------------------------------ //
 
-        /*
+
 
         CardView card_view = (CardView) findViewById(R.id.new_class); // creating a CardView and assigning a value.
 
@@ -58,19 +61,19 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-      */
+
         // ------------------------------------------------------------------------------------ //
 
     }
 
 
     // ------------------------------------------------------------------------------------ //
-    /*
+
     public void OpenActivity_NewClassActivity() {
         Intent NewClassActivity = new Intent(getApplicationContext(), NewClassActivity.class);
         startActivity(NewClassActivity);
     }
-    */
+
     // ------------------------------------------------------------------------------------ //
 
     }
